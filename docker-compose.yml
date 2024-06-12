@@ -5,8 +5,8 @@ version: '3.3'
 services:
 
   db:
-    build: ./db
-      #image: mariadb
+    #build: ./db
+    image: mariadb
     restart: always
     environment:
       MARIADB_ROOT_PASSWORD: 111
@@ -16,8 +16,8 @@ services:
 #       - ./database:/var/lib/mysql
 
   adminer:
-    build: ./adminer
-      #image: adminer
+    #build: ./adminer
+    image: adminer
     restart: always
     ports:
       - 5080:8080
